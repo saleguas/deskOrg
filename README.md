@@ -5,7 +5,7 @@ The functionality and GUI is minimalistic for now which I plan to fix on future 
 [![HitCount](http://hits.dwyl.io/saleguas/desktoporganizer.svg)](http://hits.dwyl.io/saleguas/desktoporganizer)
 
 # TODO
-* Add releases
+* ~~Add releases~~
 * Replace strings with .join() instead of '+'
 * Add option to not delete original files
 * Add option to change target directory
