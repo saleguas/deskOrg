@@ -2,6 +2,8 @@
 As the name implies, a desktop organizer that will move files into folders based on various attributes.
 The functionality and GUI is minimalistic for now which I plan to fix on future releases.
 
+[![HitCount](http://hits.dwyl.io/saleguas/desktoporganizer.svg)](http://hits.dwyl.io/saleguas/desktoporganizer)
+
 # TODO
 * Add releases
 * Replace strings with .join() instead of '+'
