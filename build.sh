@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python setup.py build
-tar -cf build.tar build/
-bzip2 build.tar
+python setup_linux.py build
+tar -cf build_linux.tar build/
+bzip2 build_linux.tar
 rm -R build/
