@@ -1,7 +1,6 @@
-import os
-import shutil
-import sys
-import random
+from os import listdir, mkdir
+from shutil import move
+from sys import argv, exit
 
 from PySide2.QtWidgets import *
 from PySide2.QtCore import Slot, Qt
@@ -42,7 +41,6 @@ class MainWindow(QWidget):
     def start(self):
 
         if self.pathlabel.text() != "No directory selected":
-            print(self.pathlabel.text())
             for file in os.listdir(self.pathlabel.text()):
                 if "." in file:
                     destination = (self.pathlabel.text() + "/" + "_" + file[file.index(".") + 1:] )
@@ -55,13 +53,13 @@ class MainWindow(QWidget):
                     print(source)
                     shutil.move(source, destination)
 
-app = QApplication(sys.argv)
+app = QApplication(argv)
 
 widget = MainWindow()
 widget.resize(300, 100)
 widget.show()
 
-sys.exit(app.exec_())
+exit(app.exec_())
 		
 
 

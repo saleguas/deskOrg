@@ -6,7 +6,6 @@ The functionality and GUI is minimalistic for now which I plan to fix on future 
 
 # TODO
 * ~~Add releases~~
-* Replace strings with .join() instead of '+'
 * Add option to not delete original files
 * Add option to change target directory
 * Add option to systematically change the name of output folders

@@ -1,6 +1,9 @@
 #!/bin/bash
 
-python setup_linux.py build
-tar -cf build_linux.tar build/
-bzip2 build_linux.tar
-rm -R build/
+pyinstaller --onefile main.py
+rm -r __pycache__
+rm -r build
+mv dist/main ./main_linux
+rm -r dist
+bzip2 main_linux
+rm main.spec

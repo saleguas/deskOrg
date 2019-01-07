@@ -1,1 +1,3 @@
 build_linux.tar.bz2
+*.spec
+.gitignore
