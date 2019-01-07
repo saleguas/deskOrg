@@ -51,7 +51,7 @@ class MainWindow(QWidget):
                         print("it exists")
                     print(destination)
                     print(source)
-                    shutil.move(source, destination)
+                    move(source, destination)
 
 app = QApplication(argv)
 

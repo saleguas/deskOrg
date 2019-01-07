@@ -1,3 +1,4 @@
 build_linux.tar.bz2
 *.spec
+main.exe
 .gitignore
