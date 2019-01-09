@@ -1,9 +1,9 @@
 #!/bin/bash
 
-pyinstaller --onefile main.py
+pyinstaller --onefile runner.py
 rm -r __pycache__
 rm -r build
-mv dist/main ./main_linux
+mv dist/runner ./runner_linux
 rm -r dist
-bzip2 main_linux
-rm main.spec
+bzip2 runner_linux
+rm runner.spec

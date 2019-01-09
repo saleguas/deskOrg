@@ -1,9 +1,9 @@
-pyinstaller --onefile main.py
+pyinstaller --onefile runner.py
 rd /s /q __pycache__
 if exist __pycache__ rd /s /q __pycache__
 rd /s /q build
 if exist build rd /s /q build
-MOVE C:\Users\drale\Documents\desktoporganizer\dist\main.exe C:\Users\drale\Documents\desktoporganizer
+MOVE %cd%\dist\runner.exe %cd%
 rmdir dist /Q
-del main.spec
+del runner.spec
 pause
