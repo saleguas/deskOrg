@@ -6,12 +6,16 @@ from PySide2.QtWidgets import *
 from PySide2.QtCore import Slot, Qt
 from PySide2.QtGui import *
 
-first
+firstbool = True
+secondbool = False
+thirdbool = False
 
 class OptionWindow(QMainWindow):
+
+
+
     def __init__(self, parent=None):
         super(OptionWindow, self).__init__(parent)
-        self.boxarr = [0, 0, 0]
         self.layout = QVBoxLayout()
         #finishing up
         self.widget = QWidget()
@@ -37,15 +41,22 @@ class OptionWindow(QMainWindow):
         self.layout.addWidget(self.thirdBox)
 
     def firstBoxCheck(self):
-        print("hey")
+        global firstbool
+        firstbool = not firstbool
+        print(firstbool)
 
 
     def secondBoxCheck(self):
-        print("hey")
+        global secondbool
+        secondbool = not secondbool
+        print(secondbool)
 
 
     def thirdBoxCheck(self):
-        print("hey")
+        global thirdbool
+        thirdbool = not thirdbool
+        print(thirdbool)
+
 
 #####################################################################
 
@@ -53,6 +64,7 @@ class MainWindow(QWidget):
 
 
     def __init__(self):
+
         QWidget.__init__(self)
         #misc stuff
         self.title = "Desktop organizer"
@@ -77,6 +89,10 @@ class MainWindow(QWidget):
         self.setLayout(self.layout)
 
 
+    def start(self):
+        global firstbool, secondbool, thirdbool
+        if(firstbool)
+            SORT wEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE                                                              D
 
     def opt(self):
         self.SW = OptionWindow()
@@ -90,8 +106,7 @@ class MainWindow(QWidget):
         self.pathlabel.setText(filename)
 
 
-    def start(self):
-
+    def sortByName(self):
         if self.pathlabel.text() != "No directory selected":
             for file in os.listdir(self.pathlabel.text()):
                 if "." in file:
