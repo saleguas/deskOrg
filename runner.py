@@ -91,9 +91,8 @@ class MainWindow(QWidget):
 
     def start(self):
         global firstbool, secondbool, thirdbool
-        if(firstbool)
-            SORT wEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE                                                              D
-
+        if(firstbool):
+            self.sortByName()
     def opt(self):
         self.SW = OptionWindow()
         self.SW.resize(300, 300)
