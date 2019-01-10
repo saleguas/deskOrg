@@ -6,6 +6,7 @@ from PySide2.QtWidgets import *
 from PySide2.QtCore import Slot, Qt
 from PySide2.QtGui import *
 
+first
 
 class OptionWindow(QMainWindow):
     def __init__(self, parent=None):
@@ -17,22 +18,34 @@ class OptionWindow(QMainWindow):
         self.widget.setLayout(self.layout)
         self.setCentralWidget(self.widget)
         self.loadBoxes()
-        for box in range(len(self.boxarr2)):
-            self.boxarr[box] = self.boxarr2[box].isChecked()
+
 
     def loadBoxes(self):
         #checkboxes
         self.firstBox = QCheckBox("Delete original files")
         self.secondBox = QCheckBox("Sort based on extension")
         self.thirdBox = QCheckBox("Sort based on name")
+        #connecting
+        self.firstBox.stateChanged.connect(self.firstBoxCheck)
+        self.secondBox.stateChanged.connect(self.secondBoxCheck)
+        self.thirdBox.stateChanged.connect(self.thirdBoxCheck)
+
         self.boxarr2 = [self.firstBox, self.secondBox, self.thirdBox]
         #adding boxes
         self.layout.addWidget(self.firstBox)
         self.layout.addWidget(self.secondBox)
         self.layout.addWidget(self.thirdBox)
 
-    def getStates(self):
-        return[box.isChecked() for box in self.boxarr2]
+    def firstBoxCheck(self):
+        print("hey")
+
+
+    def secondBoxCheck(self):
+        print("hey")
+
+
+    def thirdBoxCheck(self):
+        print("hey")
 
 #####################################################################
 
