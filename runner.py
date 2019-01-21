@@ -1,10 +1,10 @@
-from os import listdir, mkdir
-from shutil import move
-from sys import argv, exit
+import sys
+import modules
 
 from PySide2.QtWidgets import *
 from PySide2.QtCore import Slot, Qt
 from PySide2.QtGui import *
+# from modules import *
 
 firstbool = True
 secondbool = False
@@ -92,7 +92,8 @@ class MainWindow(QWidget):
     def start(self):
         global firstbool, secondbool, thirdbool
         if(firstbool):
-            self.sortByName()
+            modules.sortByName(self.pathlabel.text())
+
     def opt(self):
         self.SW = OptionWindow()
         self.SW.resize(300, 300)
@@ -105,19 +106,6 @@ class MainWindow(QWidget):
         self.pathlabel.setText(filename)
 
 
-    def sortByName(self):
-        if self.pathlabel.text() != "No directory selected":
-            for file in os.listdir(self.pathlabel.text()):
-                if "." in file:
-                    destination = (self.pathlabel.text() + "/" + "_" + file[file.index(".") + 1:] )
-                    source = self.pathlabel.text() + "/" + file
-                    try:
-                        os.mkdir(destination)
-                    except FileExistsError:
-                        print("it exists")
-                    print(destination)
-                    print(source)
-                    move(source, destination)
 
 
 
@@ -125,7 +113,7 @@ class MainWindow(QWidget):
 
 ############################################################################
 def go():
-    app = QApplication(argv)
+    app = QApplication(sys.argv)
     widget = MainWindow()
     widget.resize(300, 300)
     widget.show()
