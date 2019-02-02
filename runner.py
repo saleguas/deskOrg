@@ -1,10 +1,13 @@
+##################################################
+# VERY OUTDATED! USE DCMD.PY INSTEAD!
+##################################################
 import sys
 import modules
 
 from PySide2.QtWidgets import *
-from PySide2.QtCore import Slot, Qt
+from PySide2.QtCore import *
 from PySide2.QtGui import *
-# from modules import *
+from modules import *
 
 firstbool = True
 secondbool = False
