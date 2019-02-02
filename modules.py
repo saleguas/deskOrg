@@ -4,15 +4,16 @@ import pathlib
 
 def sortByExtension(path):
     for file in os.listdir(path):
-        print(pathlib.Path(file).suffix)
-        # if "." in file:
-        #     destination = (path + "/" + "_" + file[file.index(".") + 1:] )
-        #     source = path + "/" + file
-        #     try:
-        #         os.mkdir(destination)
-        #     except FileExistsError:
-        #         print("it exists")
-        #     print(destination)
-        #     print(source)
-        #     shutil.move(source, destination)
+        ext = pathlib.Path(file).suffix[1]
+        print(ext)
+        if "." in file:
+            destination = (path + "/" + "_" + ext )
+            source = path + "/" + file
+            try:
+                print("Trying to make directory for", ext)
+                os.mkdir(destination)
+            except FileExistsError:
+                print("Unable to make directory, does it already exist?")
+            print("moved", source, "to", destination)
+            shutil.move(source, destination)
 
