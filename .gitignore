@@ -1,7 +1,8 @@
 build_linux.tar.bz2
 *.spec
-main.exe
+*.exe
 .gitignore
 __pycache__
 test
 .idea
+output
