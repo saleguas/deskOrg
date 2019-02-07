@@ -6,8 +6,9 @@ I am NOT responsible for any deletions/destruction/problems it may cause, they s
 
 [![HitCount](http://hits.dwyl.io/saleguas/desktoporganizer.svg)](http://hits.dwyl.io/saleguas/desktoporganizer)
 ```bash
-usage: dcmd.exe [-h] [--extension] [--extract] [--backup] [--date DATE]
-                data_dir
+usage: dcmd.py [-h] [--extension] [--extract] [--backup] [--date DATE]
+               [--name NAME] [--ascending ASCENDING]
+               data_dir
 
 Sorts files based on their attributes
 
@@ -22,4 +23,12 @@ optional arguments:
                         happen but sometimes they do.
   --date DATE, -d DATE  Sort based on date modified. Use: D for Day, M for
                         Month, and Y for year.
+  --name NAME, -n NAME  Sort based on Name. All conventions work like
+                        microsoft access input masking. L is any letter. ? is
+                        any character. # is any number. * is anything. Use
+                        lowercase letters and numbers for exact.
+  --ascending ASCENDING, -sba ASCENDING
+                        Sort by ascending. Type * for precision. EX: *** would
+                        sort by three letters
+
 ```
