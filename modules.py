@@ -16,7 +16,10 @@ def sortByExtension(path):
             except FileExistsError:
                 print("Unable to make directory, does it already exist?")
             print("moved", source, "to", destination)
-            shutil.move(source, destination)
+            try:
+                shutil.move(source, destination)
+            except:
+                print("unable to move", source)
 
 def sortByDate(path, precision):
     for file in os.listdir(path):

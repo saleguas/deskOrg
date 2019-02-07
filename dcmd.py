@@ -1,4 +1,5 @@
 import argparse
+from tqdm import tqdm
 from pathlib import Path
 from modules import *
 
@@ -25,10 +26,9 @@ parser.add_argument("--date", "-d",  dest='date',  help='Sort based on date modi
 
 args = parser.parse_args()
 
-if(args.backup + args.extract + args.extension > 1):
-    print("##########################################################")
-    print("Using more than one switch can cause errors. Take caution.")
-    print("##########################################################")
+print("##########################################################")
+print("Using more than one sorting switch may cause errors. Take caution.")
+print("##########################################################")
 if(args.date):
     sortByDate(str(args.data_dir), str(args.date))
 if(args.backup):
