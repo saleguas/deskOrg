@@ -4,10 +4,7 @@ The functionality and GUI is minimalistic for now which I plan to fix on future 
 
 I am NOT responsible for any deletions/destruction/problems it may cause, they should not appear in the first place though. Use at your own risk.
 
-[![HitCount](http://hits.dwyl.io/saleguas/desktoporganizer.svg)](http://hits.dwyl.io/saleguas/desktoporganizer)
-
-[![License: MIT](
-https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![HitCount](http://hits.dwyl.io/saleguas/desktoporganizer.svg)](http://hits.dwyl.io/saleguas/desktoporganizer) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
 
 
