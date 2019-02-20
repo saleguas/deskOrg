@@ -1,6 +1,5 @@
 # desktoporganizer
 As the name implies, a desktop organizer that will move files into folders based on various attributes.
-The functionality and GUI is minimalistic for now which I plan to fix on future releases.
 
 I am NOT responsible for any deletions/destruction/problems it may cause, they should not appear in the first place though. Use at your own risk.
 
