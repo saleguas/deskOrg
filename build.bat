@@ -7,5 +7,4 @@ if exist build rd /s /q build
 MOVE %cd%\dist\dcmd.exe %cd%
 rmdir dist /Q
 del dcmd.spec
-MOVE %cd%\dcmd.exe %cd%\output
 pause
