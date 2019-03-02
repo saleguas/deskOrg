@@ -3,18 +3,13 @@ import shutil
 import pathlib
 import datetime
 import re
+from tqdm import tqdm
 
 # I repeat a lot of code but it's hard to get around it.
-def sortByName(path, precision): #oh god this won't be fun
-    for file in os.listdir(path):
-        endPath = path + "/" + file
-        ext = os.path.splitext(pathlib.Path(file))[0]
-        if os.path.isfile(endPath):
-            print(ext)
-
 # Sort by ascending order. The precision parameter shows how make characters it should sort to.
 def sortByAscending(path, precision):
-    for file in os.listdir(path):
+    logger = open(str(datetime.datetime.now()), 'w')
+    for file in tqdm(os.listdir(path)):
         endPath = path + "/" + file
         ext = os.path.splitext(pathlib.Path(file))[0]
         if os.path.isfile(endPath):
@@ -26,37 +21,41 @@ def sortByAscending(path, precision):
                         try:
                             shutil.move(endPath, path + "/" + dir)
                         except:
-                            print("Couldn't move", endPath, "to", (path + '/' + dir) )
+                            logger.write("Couldn't move " + endPath + " to " + (path + '/' + dir) + '\n')
                 if not moved:
                     try:
                         os.mkdir(path + "/" + ext[0:len(precision)])
                         shutil.move(endPath, path + "/" + ext[0:len(precision)])
                     except:
-                        print("Couldn't move", endPath, "to", (path + '/' + dir))
+                        logger.write("Couldn't move " + endPath + " to " + (path + '/' + dir) + '\n')
+    logger.close()
 
 
 # Sorts by extension of files.
 def sortByExtension(path):
-    for file in os.listdir(path):
+    logger = open("logs/" + str(datetime.datetime.now()).replace(':', '-').replace(".", '-') + ".txt", 'w')
+    for file in tqdm(os.listdir(path)):
         ext = pathlib.Path(file).suffix[1:]
         # print(ext)
         endPath = path + "/" + file
         if os.path.isfile(endPath):
             destination = (path + "/" + "_" + ext)
             try:
-                print("Trying to make directory for", ext)
+                logger.write("Trying to make directory for " + ext + '\n')
                 os.mkdir(destination)
             except FileExistsError:
-                print("Unable to make directory, does it already exist?")
-            print("moved", endPath, "to", destination)
+                logger.write("Unable to make directory, does it already exist? \n")
+                logger.write("moved " +  endPath +  " to " + destination + '\n')
             try:
                 shutil.move(endPath, destination)
             except:
-                print("unable to move", endPath)
+                logger.write("unable to move " + endPath + "\n")
+    logger.close()
 
 # Sorts by either year, year and month, year month and day.
 def sortByDate(path, precision):
-    for file in os.listdir(path):
+    logger = open("logs/" + str(datetime.datetime.now()).replace(':', '-').replace(".", '-') + ".txt", 'w')
+    for file in tqdm(os.listdir(path)):
         endPath = path + "/" + file
         if os.path.isfile(endPath):
             modified = os.path.getmtime(endPath)
@@ -67,33 +66,40 @@ def sortByDate(path, precision):
                 datename = datetime.datetime.fromtimestamp(modified).strftime('%Y-%m')
             else:
                 datename = datetime.datetime.fromtimestamp(modified).strftime('%Y-%m-%d')
-            print(datename)
+            logger.write("Precision: " + datename + '\n')
             destination = (path + "/" + "_" + datename)
             try:
-                print("Trying to make directory for", )
+                logger.write("Trying to make directory for " + datename + '\n')
                 os.mkdir(destination)
             except FileExistsError:
-                print("Unable to make directory, does it already exist?")
-            print("moved", endPath, "to", destination)
+                logger.write("Unable to make directory, does it already exist?\n")
+            logger.write("moved " + endPath + " to " + destination + '\n')
             try:
                 shutil.move(endPath, destination)
             except:
-                print("unable to move", endPath)
-
+                logger.write("unable to move " + endPath)
+    logger.close()
 # Uproots all files to current directory
-def extract(path):
-    for file in os.listdir(path):
+def extract(path, FLAG):
+    if FLAG == 0:
+        logger = open("logs/" + str(datetime.datetime.now()).replace(':', '-').replace(".", '-') + ".txt", 'w')
+        FLAG += 1
+    for file in tqdm(os.listdir(path)):
         endPath = path + "/" + file
         if os.path.isdir(endPath):
-            extract(endPath)
+            extract(endPath, FLAG)
             for temp in os.listdir(endPath):
                 destination = endPath + "/" + temp
                 try:
-                    print("Extracting", destination, "to", path)
+                    if FLAG == 0:
+                        logger.write("Extracting " + destination + " to " + path)
                     shutil.move(destination, path)
                 except:
-                    print("Unable to move file, does it exist already?")
+                    if FLAG == 0:
+                        logger.write("Unable to move file, does it exist already?\n")
             os.rmdir(endPath)
+    if FLAG == 0:
+        logger.close()
 # Creates a backup before
 def backup(path):
     cdate = str(datetime.datetime.now().date())
