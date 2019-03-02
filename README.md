@@ -25,10 +25,6 @@ optional arguments:
                         happen but sometimes they do.
   --date DATE, -d DATE  Sort based on date modified. Use: D for Day, M for
                         Month, and Y for year.
-  --name NAME, -n NAME  Sort based on Name. All conventions work like
-                        microsoft access input masking. L is any letter. ? is
-                        any character. # is any number. * is anything. Use
-                        lowercase letters and numbers for exact.
   --ascending ASCENDING, -sba ASCENDING
                         Sort by ascending. Type * for precision. EX: *** would
                         sort by three letters
