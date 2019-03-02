@@ -33,9 +33,9 @@ if __name__ == "__main__":
     if args.backup:
       backup(str(args.data_dir))
     if args.extract:
-     choice = input("THIS MOVES ALL FILES UP TO THE SURFACE RECURSIVELY! IF YOU ARE UNSURE DO -b TO BACKUP BEFOREHAND! ARE YOU SURE YOU WANT PROCEED? Y/N")
-    if(choice == 'Y'):
-        extract(str(args.data_dir))
+        choice = input("THIS MOVES ALL FILES UP TO THE SURFACE RECURSIVELY! IF YOU ARE UNSURE DO -b TO BACKUP BEFOREHAND! ARE YOU SURE YOU WANT PROCEED? Y/N")
+        if(choice == 'Y'):
+            extract(str(args.data_dir))
     if args.ascending:
        sortByAscending(str(args.data_dir), str(args.ascending))
     if args.name:
