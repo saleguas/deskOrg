@@ -22,6 +22,7 @@ if __name__ == "__main__":
     parser.add_argument("--backup", "-b",  dest='backup', action='store_true', help='Backup files before any operation. Errors should not happen but sometimes they do.')
     parser.add_argument("--date", "-d",  dest='date',  help='Sort based on date modified. Use: D for Day, M for Month, and Y for year.')
     parser.add_argument("--ascending", "-sba",  dest='ascending',  help='Sort by ascending. Type * for precision. EX: *** would sort by three letters')
+    parser.add_argument("--noswitch",  dest='noswitch', action='store_true', help='Do not prompt to confirm extract input')
 
 
     args = parser.parse_args()
@@ -32,10 +33,13 @@ if __name__ == "__main__":
 
     if args.backup:
       backup(str(args.data_dir))
-    if args.extract:
-        choice = input("THIS MOVES ALL FILES UP TO THE SURFACE RECURSIVELY! IF YOU ARE UNSURE DO -b TO BACKUP BEFOREHAND! ARE YOU SURE YOU WANT PROCEED? Y/N")
-        if(choice == 'Y'):
-            extract(str(args.data_dir), 0)
+    if args.noswitch:
+        extract(str(args.data_dir), 0)
+    else:
+        if args.extract:
+            choice = input("THIS MOVES ALL FILES UP TO THE SURFACE RECURSIVELY! IF YOU ARE UNSURE DO -b TO BACKUP BEFOREHAND! ARE YOU SURE YOU WANT PROCEED? Y/N")
+            if(choice == 'Y'):
+                extract(str(args.data_dir), 0)
     if args.ascending:
        sortByAscending(str(args.data_dir), str(args.ascending))
     if args.date:
