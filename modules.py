@@ -8,7 +8,7 @@ from tqdm import tqdm
 # I repeat a lot of code but it's hard to get around it.
 # Sort by ascending order. The precision parameter shows how make characters it should sort to.
 def sortByAscending(path, precision):
-    logger = open(str(datetime.datetime.now()), 'w')
+    logger = open(str(datetime.datetime.now()).replace(".", "-").replace(":", "-") + ".txt", 'w')
     for file in tqdm(os.listdir(path)):
         endPath = path + "/" + file
         ext = os.path.splitext(pathlib.Path(file))[0]
