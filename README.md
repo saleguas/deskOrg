@@ -53,6 +53,7 @@ Then you should have all your files nice and tidy.
 If you don't like the outcome, you can reverse it by adding the -x switch or --extract. It moves all files up to the current folder. BE CAREFUL USING IT! If you were to use it on something such as your system32 folder, it would destroy your computer.
 
 
+# Final words
 I am NOT responsible for any problems it may cause, they should not appear in the first place though. Use at your own risk.
 
 
