@@ -10,6 +10,11 @@
 I am ***NOT*** responsible for any problems it may cause, they should not appear in the first place though. 
 Use at your own risk.
 
+BE CAREFUL USING IT! 
+```diff
+- If you were to use it on something such as your system32 folder, it would destroy your computer.
+```
+
 ------------------------------------------------------------------------
 
 ## Introduction
@@ -78,11 +83,6 @@ optional arguments:
 
 Its as simple as that! All your files will be organized nice and tidy.
 
-If you don't like the outcome, you can reverse it by adding the -x switch or --extract. It moves all files up to the current folder. BE CAREFUL USING IT! 
-```diff
-- If you were to use it on something such as your system32 folder, it would destroy your computer.
-```
+If you don't like the outcome, you can reverse it by adding the -x switch or --extract. It moves all files up to the current folder.
 
-
-
-
+------------------------------------------------------------------------
