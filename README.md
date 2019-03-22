@@ -33,9 +33,16 @@ Then good news! I made this tool *specifically* for fixing issues like this and 
 + A Windows or Unix Operating System
 ```
 
-## How to install:
+## How to Install
 
-## Usage
+#### 1. Install directly from the github page
+
+#### 2. Type in your terminal or cmd-line:
+```
+git clone https://github.com/saleguas/desktoporganizer deskorg
+```
+
+## How to Use It
 
 If you want the help output, then here you go:
 ```bash
