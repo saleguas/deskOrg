@@ -35,8 +35,10 @@ Then good news! I made this tool *specifically* for fixing issues like this and 
 + tqdm == 4.30.0
 + python3
 + Access to a terminal/shell/cmd
-+ A Windows or Unix Operating System
 ```
+
+#### Operating Systems it works on:
+- Windows Operating Systems
 
 ## How to Install
 
