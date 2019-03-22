@@ -54,8 +54,7 @@ optional arguments:
 
 ```
 
-However if you still don't understand it, fret not!
-
+#### However if you still don't understand it, fret not!
 #### 1. Simply open up a terminal
 ![alt text](https://github.com/saleguas/desktoporganizer/blob/master/images/opencmd.gif)
 
