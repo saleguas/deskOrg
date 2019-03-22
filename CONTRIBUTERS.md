@@ -2,7 +2,7 @@
 
 # Contributers
 
-:mortar_board: :satellite: Its always good to credit the people who help with your projects! :satellite: :mortar_board:
+:mortar_board: &nbsp; Its always good to credit the people who help with your projects! &nbsp; :mortar_board:
 
 #### Idea Contstructed and Developed By:
 [saleguas](https://github.com/saleguas)
