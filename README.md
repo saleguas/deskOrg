@@ -36,7 +36,7 @@ Then good news! I made this tool *specifically* for fixing issues like this and 
 ## How to Install
 
 #### 1. Install directly from the github page
-
+#### *OR*
 #### 2. Type in your terminal or cmd-line:
 ```
 git clone https://github.com/saleguas/desktoporganizer deskorg
