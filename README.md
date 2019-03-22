@@ -53,6 +53,8 @@ Then good news! I made this tool *specifically* for fixing issues like this and 
 git clone https://github.com/saleguas/desktoporganizer deskorg
 ```
 
+------------------------------------------------------------------------
+
 ## How to Use It
 
 If you want the help output, then here you go:
