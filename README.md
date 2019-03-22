@@ -29,6 +29,8 @@ Or this?
 
 Then good news! I made this tool *specifically* for fixing issues like this and cluttered desktops. This python3 application will sort your files into folders based on a given input and clean up your desktop. No more is the need of having to go through all your folders, DeskOrg completley does the organizing for you!
 
+------------------------------------------------------------------------
+
 ## Installation requirements
 
 ```diff
@@ -39,6 +41,8 @@ Then good news! I made this tool *specifically* for fixing issues like this and 
 
 #### Operating Systems it works on:
 - Windows Operating Systems
+
+------------------------------------------------------------------------
 
 ## How to Install
 
