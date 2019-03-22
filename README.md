@@ -5,7 +5,8 @@
 [![HitCount](http://hits.dwyl.io/saleguas/desktoporganizer.svg)](http://hits.dwyl.io/saleguas/desktoporganizer) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
 #### DISCLAIMER:
-I am ***NOT*** responsible for any problems it may cause, they should not appear in the first place though. Use at your own risk.
+I am ***NOT*** responsible for any problems it may cause, they should not appear in the first place though. 
+Use at your own risk.
 
 ------------------------------------------------------------------------
 
