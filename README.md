@@ -1,19 +1,29 @@
-[![HitCount](http://hits.dwyl.io/saleguas/desktoporganizer.svg)](http://hits.dwyl.io/saleguas/desktoporganizer) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
-# What is it?
-Has your desktop ever looked like this?
-![alt text](https://lureofmac.com/wp-content/uploads/2013/12/for-a-faster-mac.jpg)
+------------------------------------------------------------------------
 
-Or like this?
+# :file_folder: &nbsp; DesktopOrg &nbsp; :file_folder:
+
+[![HitCount](http://hits.dwyl.io/saleguas/desktoporganizer.svg)](http://hits.dwyl.io/saleguas/desktoporganizer) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+
+------------------------------------------------------------------------
+
+## Introduction
+
+Has your desktop ever looked like this?
+
+![alt text](https://lureofmac.com/wp-content/uploads/2013/12/for-a-faster-mac.jpg)
 
 ![alt text](http://gcpcafe.com/wp-content/uploads/2013/05/cluttered-dessktop.jpg?w=300)
 
-Then good news! I made this tool specifically for fixing issues like this and cluttered desktops. This python3 application will sort your files into folders based on a given input and clean up your desktop.
+Then good news! I made this tool *specifically* for fixing issues like this and cluttered desktops. This python3 application will sort your files into folders based on a given input and clean up your desktop.
 
-# Installation requirements
-```
-tqdm == 4.30.0
-python3
-Access to a terminal/shell/cmd
+## Installation requirements
+
+```diff
++ tqdm == 4.30.0
+
++ python3
+
++ Access to a terminal/shell/cmd
 ```
 # Usage
 If you want the help output, then here you go:
