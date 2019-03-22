@@ -41,6 +41,8 @@ Then good news! I made this tool *specifically* for fixing issues like this and 
 
 #### Operating Systems it works on:
 - Windows Operating Systems
+- MacOSX
+- Linux
 
 ------------------------------------------------------------------------
 
