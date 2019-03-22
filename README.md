@@ -4,6 +4,9 @@
 
 [![HitCount](http://hits.dwyl.io/saleguas/desktoporganizer.svg)](http://hits.dwyl.io/saleguas/desktoporganizer) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
+#### DISCLAIMERL:
+I am ***NOT*** responsible for any problems it may cause, they should not appear in the first place though. Use at your own risk.
+
 ------------------------------------------------------------------------
 
 ## Introduction
@@ -23,7 +26,8 @@ Then good news! I made this tool *specifically* for fixing issues like this and 
 + python3
 + Access to a terminal/shell/cmd
 ```
-# Usage
+## Usage
+
 If you want the help output, then here you go:
 ```bash
 usage: dcmd.py [-h] [--extension] [--extract] [--backup] [--date DATE]
@@ -48,22 +52,18 @@ optional arguments:
                         sort by three letters
 
 ```
+
 However if you still don't understand it, fret not!
 
-Simply open up a terminal
+#### 1. Simply open up a terminal
 ![alt text](https://github.com/saleguas/desktoporganizer/blob/master/images/opencmd.gif)
 
-Then run the dcmd.exe or dcmd.py file from the shell with the directory immediately following and any switches.
+#### 2. Then run the dcmd.exe or dcmd.py file from the shell with the directory immediately following and any switches.
 ![alt text](https://github.com/saleguas/desktoporganizer/blob/master/images/go.gif)
 
 Then you should have all your files nice and tidy.
 
 If you don't like the outcome, you can reverse it by adding the -x switch or --extract. It moves all files up to the current folder. BE CAREFUL USING IT! If you were to use it on something such as your system32 folder, it would destroy your computer.
-
-
-# Final words
-I am NOT responsible for any problems it may cause, they should not appear in the first place though. Use at your own risk.
-
 
 
 
