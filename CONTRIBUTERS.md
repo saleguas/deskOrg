@@ -6,6 +6,7 @@
 
 #### **Tool Contstructed and Developed By:**
 [saleguas](https://github.com/saleguas) - Main Developer/Producer
+[WillBillNye](https://github.com/WillBillNye) - Assistant Developer
 
 #### **Contributers:**
 [lin8x](https://github.com/lin8x) - Worked on improving the README.md and the CONTRIBUTER.md file
