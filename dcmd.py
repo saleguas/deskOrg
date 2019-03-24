@@ -2,8 +2,10 @@ import argparse
 from tqdm import tqdm
 from pathlib import Path
 from modules import *
+from gooey import Gooey
 
-if __name__ == "__main__":
+@Gooey
+def main():
     def str2bool(v):
         if v.lower() in ('yes', 'true', 't', 'y', '1'):
             return True
@@ -46,3 +48,6 @@ if __name__ == "__main__":
       sortByDate(str(args.data_dir), str(args.date))
     if args.extension:
      sortByExtension(str(args.data_dir))
+
+if __name__ == "__main__":
+    main()

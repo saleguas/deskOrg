@@ -41,15 +41,24 @@ def sortByExtension(path):
         if os.path.isfile(endPath):
             destination = (path + "/" + "_" + ext)
             try:
-                logger.write("Trying to make directory for " + ext + '\n')
-                os.mkdir(destination)
-            except FileExistsError:
-                logger.write("Unable to make directory, does it already exist? \n")
-                logger.write("moved " +  endPath +  " to " + destination + '\n')
-            try:
-                shutil.move(endPath, destination)
+                try:
+                    logger.write("Trying to make directory for " + ext + '\n')
+                    os.mkdir(destination)
+                except FileExistsError:
+                    logger.write("Unable to make directory, does it already exist? \n")
+                    logger.write("moved " +  endPath +  " to " + destination + '\n')
+                try:
+                    shutil.move(endPath, destination)
+                except:
+                    logger.write("unable to move " + endPath + "\n")
             except:
-                logger.write("unable to move " + endPath + "\n")
+                logger.write("Processing failed! Are you using an unsupported character?")
+                logger.write("Attempting to move without logging...")
+                try:
+                    os.mkdir(destination)
+                    shutil.move(endPath, destination)
+                except:
+                    logger.write("Unable to move the file.")
     logger.close()
 
 # Sorts by either year, year and month, year month and day.
@@ -73,7 +82,11 @@ def sortByDate(path, precision):
                 os.mkdir(destination)
             except FileExistsError:
                 logger.write("Unable to make directory, does it already exist?\n")
-            logger.write("moved " + endPath + " to " + destination + '\n')
+
+            try:
+                logger.write("moved " + endPath + " to " + destination + '\n')
+            except:
+                logger.write("Couldn't log correctly")
             try:
                 shutil.move(endPath, destination)
             except:
