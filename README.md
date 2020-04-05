@@ -6,6 +6,7 @@
 
 ------------------------------------------------------------------------
 
+# THE REPO IS NO LONGER MAINTAINED! CHECK OUT THE SUCCESSOR TO THIS PROJECT: ![Freshen](https://github.com/saleguas/freshen)
 #### DISCLAIMER:
 I am ***NOT*** responsible for any problems it may cause, they should not appear in the first place though. 
 Use at your own risk.
