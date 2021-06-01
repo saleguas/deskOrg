@@ -58,7 +58,7 @@ soupsieve==1.8
 tornado==5.1.1
 tqdm==4.30.0
 Unidecode==1.0.23
-urllib3==1.24.1
+urllib3==1.26.5
 virtualenv==16.2.0
 virtualenv-clone==0.4.0
 webruntime==0.5.6
