@@ -49,7 +49,7 @@ PySide2==5.12.0
 pytest==4.0.2
 pytest-timeit==0.3.0
 pyvoicechanger==1.5.0
-pywin32==224
+pywin32==301
 pywin32-ctypes==0.2.0
 requests==2.21.0
 shiboken2==5.12.0
