@@ -33,7 +33,7 @@ netifaces==0.10.9
 numpy==1.15.4
 pefile==2018.8.8
 pigar==0.9.1
-Pillow==5.4.1
+Pillow==9.0.0
 pipenv==2018.11.26
 pluggy==0.8.0
 pscript==0.7.0
